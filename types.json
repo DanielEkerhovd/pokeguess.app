@@ -1,0 +1,76 @@
+{
+    "types": [
+        {
+            "name": "normal",
+            "image": "normal.png"
+        },
+        {
+            "name": "fighting",
+            "image": "fighting.png"
+        },
+        {
+            "name": "flying",
+            "image": "flying.png"
+        },
+        {
+            "name": "poison",
+            "image": "poison.png"
+        },
+        {
+            "name": "ground",
+            "image": "ground.png"
+        },
+        {
+            "name": "rock",
+            "image": "rock.png"
+        },
+        {
+            "name": "bug",
+            "image": "bug.png"
+        },
+        {
+            "name": "ghost",
+            "image": "ghost.png"
+        },
+        {
+            "name": "steel",
+            "image": "steel.png"
+        },
+        {
+            "name": "fire",
+            "image": "fire.png"
+        },
+        {
+            "name": "water",
+            "image": "water.png"
+        },
+        {
+            "name": "grass",
+            "image": "grass.png"
+        },
+        {
+            "name": "electric",
+            "image": "electric.png"
+        },
+        {
+            "name": "psychic",
+            "image": "psychic.png"
+        },
+        {
+            "name": "ice",
+            "image": "ice.png"
+        },
+        {
+            "name": "dragon",
+            "image": "dragon.png"
+        },
+        {
+            "name": "dark",
+            "image": "dark.png"
+        },
+        {
+            "name": "fairy",
+            "image": "fairy.png"
+        }
+    ]
+}
