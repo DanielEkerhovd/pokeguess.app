@@ -1,9 +1,7 @@
 export default function removeSelectEvent() {
 
-    const choice1 = document.getElementById('choice1');
-    const choice2 = document.getElementById('choice2');
-
-    const choices = [choice1, choice2];
+    const choiceContainer = document.getElementById('choices');
+    const choices = Array.from(choiceContainer.children);
 
     const typingContainer = document.getElementById('typings');
 
