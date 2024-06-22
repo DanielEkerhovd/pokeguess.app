@@ -7,9 +7,9 @@ export default function renderSelection(pokemon) {
 
     pokemon.types.forEach(type => {
         const selection = document.createElement('div');
-        selection.id = `choice${i}`
+        selection.id = `choice${i + 1}`;
         i++;
-        selection.classList.add('size-20', 'bg-gray-600', 'rounded-full', 'flex', 'justify-center', 'items-center');
+        selection.classList.add('size-16', 'flex', 'justify-center', 'items-center', 'rounded-full', 'bg-gray-200');
         selectionContainer.appendChild(selection);
     });
 

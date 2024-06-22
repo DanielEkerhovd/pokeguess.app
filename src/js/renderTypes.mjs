@@ -6,12 +6,12 @@ const types = typing.types;
 
 function createTypeElement(type) {
     const typeElement = document.createElement('div');
-    typeElement.classList.add('size-20', 'bg-white', 'rounded-full');
-    typeElement.id = `${type.name}Type`;
+    typeElement.classList.add('size-16', 'rounded-full',);
+    typeElement.id = `${type.name}`;
     const typeImage = document.createElement('img');
-    typeImage.src = `/src/media/type-icons/${type.name}type.png`;
+    typeImage.src = `/src/media/type-icons/${type.name}.png`;
     typeImage.alt = `${type.name} type`;
-    typeImage.classList.add('bg-bg-dark', 'rounded-full');
+    typeImage.classList.add('rounded-full', 'size-16');
     typeElement.appendChild(typeImage);
     return typeElement;
 }
