@@ -11,6 +11,8 @@ export default function submitEvent(pokemon) {
         const choice1 = document.getElementById('choice1');
         const selected1 = choice1.firstChild
 
+        console.log(pokemon.types);
+
         if (document.getElementById('choice2')) {
             const choice2 = document.getElementById('choice2');
             const selected2 = choice2.firstChild
@@ -32,9 +34,7 @@ export default function submitEvent(pokemon) {
                 }
 
             } ;
-        };
-
-        if (selected1) {
+        } else {
             const selectedTypes = [selected1.id];
             const correctTypes = [pokemon.types[0]];
 
@@ -51,7 +51,6 @@ export default function submitEvent(pokemon) {
             }
 
         }
-
 
     });
 
