@@ -8,12 +8,12 @@ export default async function runApi(maxRetries = 5) {
             const randomPokemon = fetchRandomPokemon();
             const pokemon = await fetchPokemon(randomPokemon);
             if (!pokemon.status === 404) {
-                console.log('pokemon missing');
+                console.error('pokemon missing');
                 attempts++;
             }
             return pokemon;
         } catch (error) {
-            console.error("Failed to fetch Pokémon:", error);
+            console.error("Failed to fetch Pokémon");
             attempts++;
         }
     }
