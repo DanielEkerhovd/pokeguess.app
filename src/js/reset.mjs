@@ -14,7 +14,7 @@ export default async function reset() {
         const typings = document.getElementById('typings');
 
         while (choices.firstChild) {
-            typings.append(choices.firstChild);
+            typings.appendChild(choices.firstChild);
         };
 
         resetDisplay();
