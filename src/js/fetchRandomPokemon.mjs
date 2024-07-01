@@ -1,10 +1,7 @@
-export default async function fetchRandomPokemon() {
+export default function fetchRandomPokemon() {
 
-    const response = await fetch('https://pokeapi.co/api/v2/pokemon');
-    const data = await response.json();
-    const count = data.count;
-    const randomId = Math.floor(Math.random() * count) + 1;
-
-    return randomId;
+    const amount = localStorage.getItem('currentPokemonAmount');
+    const randomPokemon = Math.floor(Math.random() * amount) + 1;
+    return randomPokemon;
 
 };

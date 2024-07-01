@@ -15,7 +15,7 @@ export default async function fetchPokemon(id) {
     return pokemon;
     
     } catch (error) {
-        location.reload();
-    }
+        console.error(error);
+    };
 
-}
+};

@@ -8,7 +8,13 @@ export default function selectEvent(element) {
         if (!choice2) {
             if (!choice1.firstChild) {
                 choice1.appendChild(element);
+            } else {
+                const selected = choice1.firstChild;
+                const typingContainer = document.getElementById('typings');
+                typingContainer.appendChild(selected);
+                choice1.appendChild(element);
             }
+            
         } else {
             if (!choice1.firstChild && choice2.firstChild !== element) {
                 choice1.appendChild(element);
