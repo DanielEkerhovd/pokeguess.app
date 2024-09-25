@@ -31,11 +31,7 @@
     "tailwindcss": "^3.4.4"
   },
   "lint-staged": {
-    "/src/**/*.js": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "/src/script.js": [
+    "*.js": [
       "eslint --fix",
       "prettier --write"
     ],

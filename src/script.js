@@ -1,14 +1,14 @@
-import renderTypes from "./js/render/renderTypes.mjs";
-import runApi from "./js/api/runApi.mjs";
-import renderPage from "./js/render/renderPage.mjs";
-import fetchPokemonAmount from "./js/api/fetchPokemonAmount.mjs";
+import renderTypes from './js/render/renderTypes.mjs';
+import runApi from './js/api/runApi.mjs';
+import renderPage from './js/render/renderPage.mjs';
+import fetchPokemonAmount from './js/api/fetchPokemonAmount.mjs';
 
 async function main() {
   try {
     await fetchPokemonAmount();
     // Fetches first pokemon
     const pokemon = await runApi();
-    console.log("First Pokemon", pokemon);
+    console.log('First Pokemon', pokemon);
 
     // Renders types buttons
     renderTypes();
@@ -19,11 +19,8 @@ async function main() {
     // - submitEvent: Adds functionality to the submit button, with the correct answer
     renderPage(pokemon);
   } catch (error) {
-    console.error("Failed to fetch Pokémon:", error);
+    console.error('Failed to fetch Pokémon:', error);
   }
 }
 
-main
-
-(
-);
+main();
