@@ -13,11 +13,9 @@ async function main() {
     // Renders types buttons
     renderTypes();
 
-    // Renders page with the first pokemon data
-    // - renderPokemon: Visualizes the pokemon data
-    // - renderSelection: Visualizes the selection buttons and adds functionality
-    // - submitEvent: Adds functionality to the submit button, with the correct answer
-    renderPage(pokemon);
+    // Sets up the initial array of pre-fetched Pokémon
+    const renderedPokemon = [];
+    renderPage(pokemon, renderedPokemon);
   } catch (error) {
     console.error('Failed to fetch Pokémon:', error);
   }

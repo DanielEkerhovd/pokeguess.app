@@ -2,10 +2,21 @@ import renderPage from './render/renderPage.mjs';
 import runApi from './api/runApi.mjs';
 import resetDisplay from './resetDisplay.mjs';
 
-export default async function reset() {
+export default async function reset(renderedPokemon) {
   const resetButton = document.getElementById('retry');
-  const nextPokemon = await runApi();
-  console.log('Next Pokemon', nextPokemon);
+
+  const preLoad = 5;
+
+  for (let i = renderedPokemon.length; i < preLoad; i++) {
+    const pokemon = await runApi();
+    renderedPokemon.push(pokemon);
+  }
+
+  console.log('Rendered Pokémon:', renderedPokemon);
+
+  const nextPokemon = renderedPokemon.shift();
+
+  console.log('Next Pokémon:', nextPokemon);
 
   resetButton.addEventListener('click', function () {
     const choice1 = document.getElementById('choice1');
@@ -20,6 +31,6 @@ export default async function reset() {
 
     resetDisplay();
     sessionStorage.setItem('counter', 0);
-    renderPage(nextPokemon);
+    renderPage(nextPokemon, renderedPokemon);
   });
 }
