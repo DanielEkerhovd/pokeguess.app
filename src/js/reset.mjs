@@ -5,18 +5,14 @@ import resetDisplay from './resetDisplay.mjs';
 export default async function reset(renderedPokemon) {
   const resetButton = document.getElementById('retry');
 
-  const preLoad = 5;
+  const preLoad = 3;
 
   for (let i = renderedPokemon.length; i < preLoad; i++) {
     const pokemon = await runApi();
     renderedPokemon.push(pokemon);
   }
 
-  console.log('Rendered Pokémon:', renderedPokemon);
-
   const nextPokemon = renderedPokemon.shift();
-
-  console.log('Next Pokémon:', nextPokemon);
 
   resetButton.addEventListener('click', function () {
     const choice1 = document.getElementById('choice1');
