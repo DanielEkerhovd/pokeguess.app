@@ -1,40 +1,66 @@
-export default function selectEvent(element) {
-    function selectEventListener() {
-        const choice1 = document.getElementById('choice1');
-        const choice2 = document.getElementById('choice2');
-        const typingContainer = document.getElementById('typings');
+export default function selectEvent(element, counter) {
+  // Switching between where to push new elements
 
-        // Function to move an element to the typingContainer if it's not choice1 or choice2
-        function moveToTypingContainer(el) {
-            if (el && el !== choice1 && el !== choice2) {
-                typingContainer.appendChild(el);
-            }
-        }
+  function selectEventListener() {
+    const choice1 = document.getElementById('choice1');
+    const choice2 = document.getElementById('choice2');
+    const typingContainer = document.getElementById('typings');
 
-        // Single choice container logic
-        if (!choice2) {
-            if (!choice1.firstChild) {
-                choice1.appendChild(element);
-            } else {
-                moveToTypingContainer(choice1.removeChild(choice1.firstChild));
-                choice1.appendChild(element);
-            }
+    const typing = element;
+
+    // Handle 1 typing selection
+
+    if (!choice2) {
+      // If choice1 already has the element, remove it
+      if (choice1.firstChild === typing) {
+        typingContainer.appendChild(typing);
+      } else {
+        if (!choice1.firstChild) {
+          choice1.appendChild(typing);
         } else {
-            // Two choice containers logic
-            if (!choice1.firstChild) {
-                choice1.appendChild(element);
-            } else if (!choice2.firstChild && choice1.firstChild !== element) {
-                choice2.appendChild(element);
-            } else if (choice1.firstChild === element) {
-                moveToTypingContainer(choice1.removeChild(element));
-            } else if (choice2.firstChild === element) {
-                moveToTypingContainer(choice2.removeChild(element));
-            } else if (choice1.firstChild !== element && choice2.firstChild) {
-                moveToTypingContainer(choice1.firstChild);
-                choice1.appendChild(element);
-            }
+          typingContainer.appendChild(choice1.firstChild);
+          choice1.appendChild(typing);
         }
+      }
     }
 
-    element.addEventListener('click', selectEventListener);
+    if (choice1 && choice2) {
+      // If the element is already in choice1, remove it to typingContainer
+      if (choice1.firstChild === typing || choice2.firstChild === typing) {
+        typingContainer.appendChild(typing);
+        return;
+      }
+
+      // If choice1 is empty, add the element
+      if (!choice1.firstChild) {
+        choice1.appendChild(typing);
+        return;
+      }
+
+      // If choice2 is empty, add the element
+      if (!choice2.firstChild) {
+        choice2.appendChild(typing);
+        return;
+      }
+
+      let counter = sessionStorage.getItem('counter');
+
+      // Switch between adding the new element to choice1 or choice2
+      if (counter % 2 === 0) {
+        typingContainer.appendChild(choice1.firstChild);
+        choice1.appendChild(typing);
+        counter++;
+      } else {
+        typingContainer.appendChild(choice2.firstChild);
+        choice2.appendChild(typing);
+        counter++;
+      }
+      
+      sessionStorage.setItem('counter', counter);
+
+    }
+  }
+
+  // Ensure that only elements in the typing container can be clicked to move back to the choices
+  element.addEventListener('click', selectEventListener);
 }

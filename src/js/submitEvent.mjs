@@ -12,7 +12,6 @@ export default function submitEvent(pokemon) {
 
         const resetButton = document.getElementById('retry');
     
-        const typesContainer = document.getElementById('typings');
         const choice1 = document.getElementById('choice1');
         const selected1 = choice1.firstChild;
         const choice2 = document.getElementById('choice2');

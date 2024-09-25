@@ -5,7 +5,7 @@ export default function renderSelection(pokemon) {
 
     let i = 0;
 
-    pokemon.types.forEach(type => {
+    pokemon.types.forEach(() => {
         const selection = document.createElement('div');
         selection.id = `choice${i + 1}`;
         i++;

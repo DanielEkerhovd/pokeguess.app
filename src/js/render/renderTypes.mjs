@@ -31,6 +31,9 @@ function createTypeElement(type) {
 
 export default function renderTypes() {
 
+    const counter = 0;
+    sessionStorage.setItem('counter', counter);
+
     const typesContainer = document.getElementById('typings');
 
     types.forEach(type => {

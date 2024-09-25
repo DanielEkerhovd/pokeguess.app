@@ -8,14 +8,19 @@ export default async function reset() {
   console.log("Next Pokemon", nextPokemon);
 
   resetButton.addEventListener("click", function () {
-    const choices = document.getElementById("choices");
+    const choice1 = document.getElementById("choice1");
+    const choice2 = document.getElementById("choice2");
     const typings = document.getElementById("typings");
 
-    while (choices.firstChild) {
-      typings.appendChild(choices.firstChild);
+    if (!choice2)
+      typings.appendChild(choice1.firstChild);
+    else {
+      typings.appendChild(choice1.firstChild);
+      typings.appendChild(choice2.firstChild);
     }
 
     resetDisplay();
+    sessionStorage.setItem("counter", 0);
     renderPage(nextPokemon);
   });
 }
