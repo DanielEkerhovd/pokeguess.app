@@ -9,7 +9,7 @@ export default function renderSelection(pokemon) {
     selection.id = `choice${i + 1}`;
     i++;
     selection.classList.add(
-      'size-16',
+      'size-12',
       'flex',
       'justify-center',
       'items-center',

@@ -1,30 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PokéGuess</title>
 
-    <link rel="stylesheet" href="./dist/styles.css">
-</head>
-    <body class="bg-bg-dark font-roboto">
-        <main class="text-white flex flex-col gap-5 items-center mt-10">
-            <h1 class="text-6xl font-bold">PokéGuess</h1>
-            <p class="text-2xl">Guess the pokemon's type(s)</p>
-            <div class="flex flex-col gap-8 items-center py-5 bg-gray-600 max-w-screen-sm w-10/12 rounded-sm">
-                <h2 id="pokeName" class="text-3xl font-semibold"></h2>
-                <div id="display" class="bg-white flex items-center justify-center rounded-md w-10/12 max-w-sm h-36">
-                    <img id="pokemonImage" class="size-40" src="" alt="">
-                </div>
-                <div id="submitContainer" class="flex w-10/12 max-w-sm gap-5">
-                </div>
-                <div id="choices" class="flex items-center justify-center gap-5 bg-white h-32 w-10/12 max-w-sm rounded-md">
-                    
-                </div>
-                <div id="typings" class="flex flex-wrap justify-center gap-2 w-11/12 max-w-sm">
-                </div>
-            </div>
-        </main>
-        <script type="module" src="./src/script.js"></script>
-    </body>
+    <link rel="stylesheet" href="./dist/styles.css" />
+  </head>
+  <body class="bg-bg-dark font-roboto">
+    <main class="text-white flex flex-col items-center">
+      <h1 class="text-2xl font-bold my-5">PokéGuess</h1>
+      <div
+        class="flex flex-col gap-5 items-center py-5 bg-gray-600 w-full rounded-sm"
+      >
+        <h2 id="pokeName" class="text-xl font-semibold"></h2>
+        <div
+          id="display"
+          class="bg-white flex items-center justify-center rounded-md w-11/12 max-w-sm h-36"
+        >
+          <img id="pokemonImage" class="size-36" />
+        </div>
+        <div id="submitContainer" class="flex w-11/12 max-w-sm gap-5"></div>
+        <div
+          id="choices"
+          class="flex items-center justify-center gap-5 bg-white py-5 w-11/12 max-w-sm rounded-md"
+        ></div>
+        <div
+          id="typings"
+          class="flex flex-wrap justify-center gap-2 w-11/12 max-w-sm"
+        ></div>
+      </div>
+    </main>
+    <script type="module" src="./src/script.js"></script>
+  </body>
 </html>
