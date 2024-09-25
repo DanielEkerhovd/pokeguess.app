@@ -3,8 +3,8 @@ export default function renderPokemon(pokemon) {
   const nameContainer = document.getElementById('pokeName');
 
   const pokeName = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
-  nameContainer.textContent = `#${pokemon.id} ${pokeName}`;
+  nameContainer.textContent = pokeName;
 
   imageContainer.src = pokemon.image;
-  imageContainer.alt = pokeName + ' image';
+  imageContainer.alt = 'Image of the pokemon ' + pokeName;
 }
