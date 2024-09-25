@@ -1,8 +1,21 @@
-import typing from '/types.json' with { type: 'json' };
-import selectEvent from './selectEvent.mjs';
-import removeSelectEvent from './removeSelectEvent.mjs';
+import selectEvent from '../select/selectEvent.mjs';
+import removeSelectEvent from '../select/removeSelectEvent.mjs';
 
-const types = typing.types;
+const fetchTypings = async () => {
+
+    try {
+        const response = await fetch('../types.json');
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error(error);
+    };
+
+}
+
+const fetchedTypes = await fetchTypings();
+
+const types = fetchedTypes.types;
 
 function createTypeElement(type) {
     const typeElement = document.createElement('div');

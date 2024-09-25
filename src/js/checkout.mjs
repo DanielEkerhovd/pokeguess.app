@@ -1,5 +1,3 @@
-
-
 export default function checkout(status) {
 
     const display = document.getElementById('display');
