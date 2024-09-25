@@ -1,4 +1,4 @@
-export default function selectEvent(element, counter) {
+export default function selectEvent(element) {
   // Switching between where to push new elements
 
   function selectEventListener() {
@@ -55,9 +55,8 @@ export default function selectEvent(element, counter) {
         choice2.appendChild(typing);
         counter++;
       }
-      
-      sessionStorage.setItem('counter', counter);
 
+      sessionStorage.setItem('counter', counter);
     }
   }
 
