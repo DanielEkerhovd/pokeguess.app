@@ -12,7 +12,7 @@ export function renderResetButton() {
     'items-center',
     'justify-center',
     'size-20',
-    'bg-bg-dark',
+    'bg-dark-hl',
     'rounded-md',
     'px-5',
   );
@@ -43,12 +43,12 @@ export function renderSubmitButton() {
     'h-20',
     'font-semibold',
     'text-2xl',
-    'bg-bg-dark',
+    'bg-dark-hl',
   );
 
   const icon = document.createElement('img');
   icon.id = 'submitIcon';
-  icon.classList.add('size-16', 'mr-2');
+  icon.classList.add('size-16');
   icon.src = '/src/media/go.png';
   icon.alt = 'Go icon';
 
