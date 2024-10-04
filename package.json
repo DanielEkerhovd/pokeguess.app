@@ -8,7 +8,7 @@
     "format": "prettier --write ./src/js/**/*.{mjs,js}",
     "lint-fix": "eslint ./src/js/**/*.{mjs,js} --cache --fix",
     "test": "",
-    "build": "tailwindcss -i src/styles.css -o dist/styles.css",
+    "build": "tailwindcss -i src/styles.css -o dist/styles.css --minify",
     "watch": "tailwindcss -i src/styles.css -o dist/styles.css --watch",
     "dev": "npm-run-all --parallel start build watch",
     "prepare": "husky"
