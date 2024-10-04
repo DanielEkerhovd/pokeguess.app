@@ -1,6 +1,6 @@
 {
   "name": "pokeguess",
-  "version": "1.0.0",
+  "version": "0.1.1",
   "main": "index.js",
   "scripts": {
     "start": "live-server --port=8080",
