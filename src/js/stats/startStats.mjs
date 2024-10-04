@@ -4,7 +4,7 @@ export default function startStats() {
   const fetchHistory = JSON.parse(localStorage.getItem('stats'));
 
   if (fetchHistory !== 'undefined') {
-    updateStats(fetchHistory);
+    updateStats();
     localStorage.setItem('stats', JSON.stringify(fetchHistory));
   } else {
     const history = {
@@ -13,10 +13,10 @@ export default function startStats() {
       percentage: 0,
     };
 
-    updateStats(history);
-
     const historyString = JSON.stringify(history);
     sessionStorage.setItem('stats', historyString);
     localStorage.setItem('stats', historyString);
+
+    updateStats();
   }
 }
