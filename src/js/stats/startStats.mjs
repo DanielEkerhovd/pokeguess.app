@@ -1,11 +1,11 @@
-import updateStats from './updateStats.mjs';
+import updateStatsDisplay from './updateStatsDisplay.mjs';
 
 export default function startStats() {
   const fetchHistory = JSON.parse(localStorage.getItem('stats'));
 
   if (fetchHistory !== 'undefined') {
-    updateStats();
-    localStorage.setItem('stats', JSON.stringify(fetchHistory));
+    updateStatsDisplay();
+    sessionStorage.setItem('stats', JSON.stringify(fetchHistory));
   } else {
     const history = {
       correct: 0,
@@ -17,6 +17,6 @@ export default function startStats() {
     sessionStorage.setItem('stats', historyString);
     localStorage.setItem('stats', historyString);
 
-    updateStats();
+    updateStatsDisplay();
   }
 }

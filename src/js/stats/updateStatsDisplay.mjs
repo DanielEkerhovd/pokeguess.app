@@ -1,4 +1,4 @@
-export default function updateStats() {
+export default function updateStatsDisplay() {
   const stats = JSON.parse(sessionStorage.getItem('stats'));
 
   const correct = document.getElementById('stats-correct');
