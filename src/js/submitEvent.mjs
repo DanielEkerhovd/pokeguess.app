@@ -1,4 +1,5 @@
 import checkout from './checkout.mjs';
+import updateStats from '../js/stats/updateStats.mjs';
 
 export default function submitEvent(pokemon) {
   const submit = document.getElementById('submitButton');
@@ -56,6 +57,7 @@ export default function submitEvent(pokemon) {
       }
 
       checkout(correct);
+      updateStats(correct);
     }
   }
 }
