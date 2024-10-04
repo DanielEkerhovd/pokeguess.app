@@ -4,8 +4,8 @@ export default function startStats() {
   const fetchHistory = JSON.parse(localStorage.getItem('stats'));
 
   if (fetchHistory !== 'undefined') {
-    updateStatsDisplay();
     sessionStorage.setItem('stats', JSON.stringify(fetchHistory));
+    updateStatsDisplay();
   } else {
     const history = {
       correct: 0,
