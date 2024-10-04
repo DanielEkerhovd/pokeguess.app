@@ -11,7 +11,6 @@ const fetchTypings = async () => {
 };
 
 const fetchedTypes = await fetchTypings();
-
 const types = fetchedTypes.types;
 
 function createTypeElement(type) {
@@ -31,6 +30,7 @@ export default function renderTypes() {
   sessionStorage.setItem('counter', counter);
 
   const typesContainer = document.getElementById('typings');
+  typesContainer.innerHTML = '';
 
   types.forEach((type) => {
     const typeButton = createTypeElement(type);
