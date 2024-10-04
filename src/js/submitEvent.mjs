@@ -20,40 +20,29 @@ export default function submitEvent(pokemon) {
     if (selected1 && (choice2 ? selected2 : true)) {
       resetButton.classList.remove('hidden');
       resetButton.classList.add('flex');
+
+      const selectedTypes = [];
+      const correctTypes = [];
+
+      if (selected1) {
+        selectedTypes.push(selected1.id);
+        correctTypes.push(pokemon.types[0]);
+      }
+
       if (selected2) {
-        // If there are two choices
-        const selectedTypes = [selected1.id, selected2.id];
-        const correctTypes = [pokemon.types[0], pokemon.types[1]];
+        selectedTypes.push(selected2.id);
+        correctTypes.push(pokemon.types[1]);
+      }
 
-        selectedTypes.sort();
-        correctTypes.sort();
+      selectedTypes.sort();
+      correctTypes.sort();
 
-        const arraysMatch =
-          selectedTypes.length === correctTypes.length &&
-          selectedTypes.every((value, index) => value === correctTypes[index]);
+      const arraysMatch =
+        selectedTypes.length === correctTypes.length &&
+        selectedTypes.every((value, index) => value === correctTypes[index]);
 
-        if (arraysMatch) {
-          correct = true;
-        } else {
-          correct = false;
-        }
-      } else {
-        // If there is only one choice
-        const selectedTypes = [selected1.id];
-        const correctTypes = [pokemon.types[0]];
-
-        selectedTypes.sort();
-        correctTypes.sort();
-
-        const arraysMatch =
-          selectedTypes.length === correctTypes.length &&
-          selectedTypes.every((value, index) => value === correctTypes[index]);
-
-        if (arraysMatch) {
-          correct = true;
-        } else {
-          correct = false;
-        }
+      if (arraysMatch) {
+        correct = true;
       }
 
       checkout(correct);
