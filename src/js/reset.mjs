@@ -1,6 +1,7 @@
 import renderPage from './render/renderPage.mjs';
 import runApi from './api/runApi.mjs';
 import resetDisplay from './resetDisplay.mjs';
+import renderTypes from './render/renderTypes.mjs';
 
 export default async function reset(renderedPokemon) {
   const resetButton = document.getElementById('retry');
@@ -26,7 +27,7 @@ export default async function reset(renderedPokemon) {
     }
 
     resetDisplay();
-    sessionStorage.setItem('counter', 0);
+    renderTypes();
     renderPage(nextPokemon, renderedPokemon);
   });
 }
