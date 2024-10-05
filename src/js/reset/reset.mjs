@@ -1,7 +1,7 @@
-import renderPage from './render/renderPage.mjs';
-import runApi from './api/runApi.mjs';
+import renderPage from '../render/renderPage.mjs';
+import runApi from '../api/runApi.mjs';
 import resetDisplay from './resetDisplay.mjs';
-import renderTypes from './render/renderTypes.mjs';
+import renderTypes from '../render/renderTypes.mjs';
 
 export default async function reset(renderedPokemon) {
   const resetButton = document.getElementById('retry');
