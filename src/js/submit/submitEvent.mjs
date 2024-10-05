@@ -1,5 +1,6 @@
 import checkout from './checkout.mjs';
 import updateStats from '../stats/updateStats.mjs';
+import showCorrectTypes from './showCorrectTypes.mjs';
 
 export default function submitEvent(pokemon) {
   const submit = document.getElementById('submitButton');
@@ -47,6 +48,7 @@ export default function submitEvent(pokemon) {
 
       checkout(correct, correctTypes);
       updateStats(correct);
+      showCorrectTypes(correct, correctTypes);
     }
   }
 }
