@@ -15,7 +15,7 @@ const types = fetchedTypes.types;
 
 function createTypeElement(type, index) {
   const typeElement = document.createElement('div');
-  typeElement.classList.add('size-12', 'rounded-full');
+  typeElement.classList.add('size-12', 'rounded-full', 'cursor-pointer');
   const typeImage = document.createElement('img');
   typeElement.id = `${type.name}`;
   typeElement.dataset.index = index;
