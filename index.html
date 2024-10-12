@@ -9,18 +9,23 @@
   </head>
   <body class="bg-dark min-h-screen text-white pt-2 font-mulish">
     <header
-      class="h-14 w-11/12 max-w-sm mx-auto flex justify-between items-center"
+      class="h-14 w-11/12 max-w-sm mx-auto flex justify-between items-center z-50"
     >
-      <div class="">
-        <h1 class="font-bold">POKEGUESS</h1>
+      <div class="cursor-pointer">
+        <h1 class="text-2xl font-bold">POKEGUESS</h1>
       </div>
-      <div class="size-12 p-1 cursor-pointer">
+      <div class="size-12 p-1 cursor-pointer relative">
         <img
           id="mobileMenu"
           class="size-full"
           src="/src/media/menu.png"
           alt="Menu icon"
         />
+        <!-- Hamburger menu -->
+        <div
+          id="menu"
+          class="fixed top-0 right-0 h-full bg-green-300 w-full max-w-80 shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-10"
+        ></div>
       </div>
     </header>
     <main class="text-white flex flex-col items-center">
