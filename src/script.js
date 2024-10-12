@@ -4,6 +4,8 @@ import renderPage from './js/render/renderPage.mjs';
 import fetchPokemonAmount from './js/api/fetchPokemonAmount.mjs';
 import stats from './js/stats/stats.mjs';
 
+import menu from './js/menu/menu.mjs';
+
 async function main() {
   try {
     await fetchPokemonAmount();
@@ -22,4 +24,5 @@ async function main() {
 }
 
 main();
+menu();
 stats();
