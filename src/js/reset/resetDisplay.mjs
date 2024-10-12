@@ -10,4 +10,9 @@ export default function resetDisplay() {
   if (!display.classList.contains('bg-white')) {
     display.classList.add('bg-white');
   }
+
+  const typesContainer = document.getElementById('typings');
+  if (typesContainer.classList.contains('hidden')) {
+    typesContainer.classList.remove('hidden');
+  }
 }
