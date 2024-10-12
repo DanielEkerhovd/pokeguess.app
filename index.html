@@ -7,12 +7,10 @@
 
     <link rel="stylesheet" href="./dist/styles.css" />
   </head>
-  <body class="bg-dark font-roboto h-auto">
-    <main
-      class="text-white flex flex-col items-center justify-center min-h-screen"
-    >
+  <body class="bg-dark font-roboto min-h-screen">
+    <main class="text-white flex flex-col items-center min-h-screen">
       <section
-        class="flex flex-col gap-5 items-center w-11/12 max-w-sm rounded-sm relative my-5"
+        class="flex flex-col gap-5 items-center w-11/12 max-w-sm rounded-sm relative mt-5 xl:mt-32"
       >
         <div
           class="bg-dark-hl w-full py-5 rounded flex justify-center items-center"
@@ -35,13 +33,16 @@
         ></div>
         <div
           id="type-message"
-          class="hidden -mb-2 w-full font-bold text-lg text-center bg-dark-hl rounded-md py-2"
+          class="hidden w-full font-bold text-lg text-center bg-dark-hl rounded-md py-2"
         ></div>
         <div
           id="typings"
           class="flex flex-wrap justify-center gap-2 w-full bg-dark-hl rounded-md p-3 sm:p-5"
         ></div>
-        <div id="stats" class="bg-dark-hl top-0 -right-44 rounded-md p-5">
+        <div
+          id="stats"
+          class="hidden bg-dark-hl top-0 -right-44 rounded-md p-5"
+        >
           <h3 class="text-white text-lg font-semibold">Stats</h3>
           <div>
             <p>
