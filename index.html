@@ -7,15 +7,30 @@
 
     <link rel="stylesheet" href="./dist/styles.css" />
   </head>
-  <body class="bg-dark font-roboto min-h-screen">
-    <main class="text-white flex flex-col items-center min-h-screen">
+  <body class="bg-dark font-roboto min-h-screen text-white pt-2">
+    <header
+      class="h-14 w-11/12 max-w-sm mx-auto flex justify-between items-center"
+    >
+      <div class="">
+        <h1 class="font-bold">POKEGUESS</h1>
+      </div>
+      <div class="size-12 p-1 cursor-pointer">
+        <img
+          id="mobileMenu"
+          class="size-full"
+          src="/src/media/menu.png"
+          alt="Menu icon"
+        />
+      </div>
+    </header>
+    <main class="text-white flex flex-col items-center">
       <section
-        class="flex flex-col gap-5 items-center w-11/12 max-w-sm rounded-sm relative mt-5 xl:mt-32"
+        class="flex flex-col gap-5 items-center w-11/12 max-w-sm rounded-sm relative"
       >
         <div
           class="bg-dark-hl w-full py-5 rounded flex justify-center items-center"
         >
-          <h2 id="pokeName" class="text-2xl font-semibold"></h2>
+          <h2 id="pokeName" class="text-xl font-semibold"></h2>
         </div>
         <div
           id="display"
