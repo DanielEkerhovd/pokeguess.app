@@ -46,6 +46,9 @@ export default function submitEvent(pokemon) {
         correct = true;
       }
 
+      const typesContainer = document.getElementById('typings');
+      typesContainer.classList.add('hidden');
+
       checkout(correct, correctTypes);
       updateStats(correct);
       showCorrectTypes(correct, correctTypes);
