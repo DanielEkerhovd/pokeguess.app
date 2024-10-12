@@ -8,7 +8,7 @@ module.exports = {
         'dark-hl': '#3D3B40',
       },
       fontFamily: {
-        roboto: ['Roboto', 'sans-serif'],
+        mulish: ['Mulish', 'sans-serif'],
       },
     },
   },
