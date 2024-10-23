@@ -14,18 +14,64 @@
       <div class="cursor-pointer">
         <h1 class="text-2xl font-bold">POKEGUESS</h1>
       </div>
-      <div class="size-12 p-1 cursor-pointer relative">
+      <div class="size-12 p-1 relative">
         <img
           id="mobileMenu"
-          class="size-full"
+          class="size-full cursor-pointer"
           src="/src/media/menu.png"
           alt="Menu icon"
         />
         <!-- Hamburger menu -->
         <div
           id="menu"
-          class="fixed top-0 right-0 h-full bg-green-500 w-full max-w-60 shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-10"
-        ></div>
+          class="fixed top-0 right-0 h-full bg-gray-800 w-full lg:max-w-md shadow-lg transform transition-transform duration-300 ease-in-out z-10 flex items-center flex-col"
+        >
+          <div
+            id="menuContent"
+            class="flex h-full flex-col gap-10 justify-center text-2xl font-semibold pt-20"
+          >
+            <a href=""><h2>HOMEPAGE</h2></a>
+            <div>
+              <h2 class="">GAMEMODES</h2>
+              <menu class="text-lg font-medium mt-5 flex flex-col gap-1">
+                <li class="cursor-pointer">Practice</li>
+                <li class="cursor-pointer">Time attack</li>
+                <li class="cursor-pointer">Survival</li>
+              </menu>
+            </div>
+            <div id="menuSettings">
+              <h2>SETTINGS</h2>
+              <menu class="text-lg font-medium mt-5 flex flex-col gap-1">
+                <li class="cursor-pointer">Reset stats</li>
+              </menu>
+            </div>
+            <div class="flex gap-5 pb-5 items-end grow max-h-40">
+              <a
+                href="https://github.com/DanielEkerhovd/pokeguess.app"
+                target="_blank"
+                class="size-8"
+                ><img src="/src/media/connect/github.png" alt="Github link"
+              /></a>
+              <a
+                href="https://danielekerhovd.com/"
+                target="_blank"
+                class="size-8"
+                ><img src="/src/media/connect/web.png" alt=""
+              /></a>
+            </div>
+          </div>
+          <div
+            id="closeMenu"
+            class="absolute top-10 right-10 lg:top-5 lg:right-5"
+          >
+            <img
+              id="closeMenu"
+              class="size-10 lg:size-6 cursor-pointer"
+              src="/src/media/wrong.png"
+              alt="Close icon"
+            />
+          </div>
+        </div>
       </div>
     </header>
     <main class="text-white flex flex-col items-center">
