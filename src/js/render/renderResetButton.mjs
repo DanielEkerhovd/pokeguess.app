@@ -13,7 +13,7 @@ export function renderResetButton() {
     'justify-center',
     'size-20',
     'bg-dark-hl',
-    'rounded-md',
+    'rounded-sm',
     'px-5',
   );
 
@@ -39,7 +39,7 @@ export function renderSubmitButton() {
     'flex',
     'items-center',
     'justify-center',
-    'rounded-md',
+    'rounded-sm',
     'h-20',
     'font-semibold',
     'text-2xl',

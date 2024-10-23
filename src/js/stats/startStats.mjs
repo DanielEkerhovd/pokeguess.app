@@ -3,7 +3,7 @@ import updateStatsDisplay from './updateStatsDisplay.mjs';
 export default function startStats() {
   const fetchHistory = JSON.parse(localStorage.getItem('stats'));
 
-  if (!fetchHistory) {
+  if (fetchHistory) {
     sessionStorage.setItem('stats', JSON.stringify(fetchHistory));
     updateStatsDisplay();
   } else {
