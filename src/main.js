@@ -6,6 +6,8 @@ import stats from './js/stats/stats.mjs';
 
 import menu from './js/menu/menu.mjs';
 
+const currentWebPage = window.location.pathname;
+
 async function main() {
   try {
     await fetchPokemonAmount();
@@ -23,6 +25,12 @@ async function main() {
   }
 }
 
-main();
-menu();
-stats();
+switch (currentWebPage) {
+  case 'index.html':
+    break;
+  case '/practice/index.html':
+    main();
+    menu();
+    stats();
+    break;
+}
