@@ -1,6 +1,5 @@
 export default function resetStats() {
   const resetStatsButton = document.getElementById('resetStats');
-  console.log(resetStatsButton);
 
   resetStatsButton.addEventListener('click', () => {
     const modal = document.createElement('div');

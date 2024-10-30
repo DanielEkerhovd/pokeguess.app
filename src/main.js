@@ -7,7 +7,6 @@ import stats from './js/stats/stats.mjs';
 import menu from './js/menu/menu.mjs';
 
 const currentWebPage = window.location.pathname;
-console.log(currentWebPage);
 
 async function main() {
   try {
