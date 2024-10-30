@@ -28,8 +28,10 @@ async function main() {
 
 switch (currentWebPage) {
   case 'index.html':
+  case '/':
     break;
   case '/practice/index.html':
+  case '/practice/':
     main();
     menu();
     stats();
