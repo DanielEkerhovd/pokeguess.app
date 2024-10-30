@@ -2,7 +2,7 @@ import selectEvent from '../select/selectEvent.mjs';
 
 const fetchTypings = async () => {
   try {
-    const response = await fetch('../types.json');
+    const response = await fetch('/types.json');
     const data = await response.json();
     return data;
   } catch (error) {
