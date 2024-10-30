@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pokéguess is a game where you guess the name of the Pokémon based on the image."
+    />
+    <meta
+      name="keywords"
+      content="Pokémon, Guess, Game, Fun, Quiz, Image, Name, Type, Stats, Practice, Time attack, Survival"
+    />
+    <meta name="author" content="Daniel Ekerhovd - danielekerhovd.com" />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/src/media/favicon.png"
+    />
+    <title>Pokéguess</title>
+
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body class="bg-dark min-h-screen text-white pt-2 font-mulish">
+    <header
+      class="h-14 w-11/12 max-w-sm mx-auto flex justify-between items-center z-50"
+    >
+      <div class="cursor-pointer">
+        <a href="/"><h1 class="text-2xl font-bold">POKEGUESS</h1></a>
+      </div>
+      <div class="size-12 p-1 relative">
+        <img
+          id="mobileMenu"
+          class="size-full cursor-pointer"
+          src="/src/media/menu.png"
+          alt="Menu icon"
+        />
+        <!-- Hamburger menu -->
+        <div
+          id="menu"
+          class="translate-x-full fixed top-0 right-0 h-full bg-gray-800 w-full xl:max-w-md shadow-lg transform transition-transform duration-300 ease-in-out z-10 flex items-center flex-col"
+        >
+          <div
+            id="menuContent"
+            class="flex h-full flex-col gap-10 justify-center text-2xl font-semibold pt-20"
+          >
+            <a href="/"><h2>HOMEPAGE</h2></a>
+            <div>
+              <h2 class="">GAMEMODES</h2>
+              <menu class="text-lg font-medium mt-5 flex flex-col gap-1">
+                <li class="cursor-pointer">Practice</li>
+                <li class="cursor-pointer">Time attack</li>
+                <li class="cursor-pointer">Survival</li>
+              </menu>
+            </div>
+            <div id="menuSettings">
+              <h2>SETTINGS</h2>
+              <menu class="text-lg font-medium mt-5 flex flex-col gap-1">
+                <li class="cursor-pointer">Reset stats</li>
+              </menu>
+            </div>
+            <div class="flex gap-5 pb-5 items-end grow max-h-40">
+              <a
+                href="https://github.com/DanielEkerhovd/pokeguess.app"
+                target="_blank"
+                class="size-8"
+                ><img src="/src/media/connect/github.png" alt="Github link"
+              /></a>
+              <a
+                href="https://danielekerhovd.com/"
+                target="_blank"
+                class="size-8"
+                ><img src="/src/media/connect/web.png" alt=""
+              /></a>
+            </div>
+          </div>
+          <div
+            id="closeMenu"
+            class="absolute top-10 right-10 lg:top-5 lg:right-5"
+          >
+            <img
+              id="closeMenu"
+              class="size-10 xl:size-6 cursor-pointer"
+              src="/src/media/wrong.png"
+              alt="Close icon"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="text-white flex flex-col items-center gap-5 mb-5">
+      <section
+        class="flex flex-col gap-5 items-center w-11/12 max-w-sm relative"
+      >
+        <div
+          class="bg-dark-hl w-full py-3 sm:py-5 rounded-sm flex justify-center items-center"
+        >
+          <h2 id="pokeName" class="text-xl font-semibold"></h2>
+        </div>
+        <div
+          id="display"
+          class="bg-white flex items-center justify-center rounded-sm w-full h-24 sm:h-36"
+        >
+          <img id="pokemonImage" class="size-24 sm:size-36" />
+        </div>
+        <div
+          id="submitContainer"
+          class="flex w-full gap-5 cursor-pointer"
+        ></div>
+        <div
+          id="choices"
+          class="flex items-center justify-center gap-5 bg-white py-5 w-full rounded-sm"
+        ></div>
+        <div
+          id="type-message"
+          class="hidden w-full font-bold text-lg text-center bg-dark-hl rounded-sm py-2"
+        ></div>
+        <div
+          id="typings"
+          class="flex flex-wrap justify-center gap-2 w-full bg-dark-hl rounded-sm p-5 sm:p-5"
+        ></div>
+        <div
+          class="md:absolute md:flex-col top-0 -left-48 flex flex-row justify-center items-center md:items-start w-full md:w-auto max-w-sm rounded-sm bg-dark-hl py-5 md:p-10 gap-10"
+        >
+          <h2 class="font-semibold sm:text-xl">Practice</h2>
+          <div class="flex flex-row md:flex-col gap-5">
+            <div class="flex flex-col items-center md:items-start">
+              <span class="sm:text-lg">Stats</span>
+              <p class="font-light">
+                <span id="stats-correct"></span> /
+                <span id="stats-total"></span>
+              </p>
+            </div>
+            <div class="flex flex-col items-center md:items-start">
+              <span class="sm:text-lg">Percentage</span>
+              <p class="font-light"><span id="stats-percentage"></span> %</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

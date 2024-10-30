@@ -24,120 +24,53 @@
     <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body class="bg-dark min-h-screen text-white pt-2 font-mulish">
-    <header
-      class="h-14 w-11/12 max-w-sm mx-auto flex justify-between items-center z-50"
-    >
-      <div class="cursor-pointer">
-        <h1 class="text-2xl font-bold">POKEGUESS</h1>
-      </div>
-      <div class="size-12 p-1 relative">
-        <img
-          id="mobileMenu"
-          class="size-full cursor-pointer"
-          src="/src/media/menu.png"
-          alt="Menu icon"
-        />
-        <!-- Hamburger menu -->
-        <div
-          id="menu"
-          class="translate-x-full fixed top-0 right-0 h-full bg-gray-800 w-full xl:max-w-md shadow-lg transform transition-transform duration-300 ease-in-out z-10 flex items-center flex-col"
-        >
-          <div
-            id="menuContent"
-            class="flex h-full flex-col gap-10 justify-center text-2xl font-semibold pt-20"
-          >
-            <a href=""><h2>HOMEPAGE</h2></a>
-            <div>
-              <h2 class="">GAMEMODES</h2>
-              <menu class="text-lg font-medium mt-5 flex flex-col gap-1">
-                <li class="cursor-pointer">Practice</li>
-                <li class="cursor-pointer">Time attack</li>
-                <li class="cursor-pointer">Survival</li>
-              </menu>
-            </div>
-            <div id="menuSettings">
-              <h2>SETTINGS</h2>
-              <menu class="text-lg font-medium mt-5 flex flex-col gap-1">
-                <li class="cursor-pointer">Reset stats</li>
-              </menu>
-            </div>
-            <div class="flex gap-5 pb-5 items-end grow max-h-40">
-              <a
-                href="https://github.com/DanielEkerhovd/pokeguess.app"
-                target="_blank"
-                class="size-8"
-                ><img src="/src/media/connect/github.png" alt="Github link"
-              /></a>
-              <a
-                href="https://danielekerhovd.com/"
-                target="_blank"
-                class="size-8"
-                ><img src="/src/media/connect/web.png" alt=""
-              /></a>
-            </div>
-          </div>
-          <div
-            id="closeMenu"
-            class="absolute top-10 right-10 lg:top-5 lg:right-5"
-          >
-            <img
-              id="closeMenu"
-              class="size-10 xl:size-6 cursor-pointer"
-              src="/src/media/wrong.png"
-              alt="Close icon"
-            />
-          </div>
-        </div>
-      </div>
-    </header>
-    <main class="text-white flex flex-col items-center">
-      <section
-        class="flex flex-col gap-5 items-center w-11/12 max-w-sm rounded-sm relative"
+    <main class="flex flex-col justify-center items-center min-h-screen gap-5">
+      <h1 class="text-3xl font-semibold">POKEGUESS</h1>
+      <p class="w-11/12 text-center font-light">
+        Sick of forgetting the types of pokémon?
+      </p>
+      <div
+        class="flex flex-col md:flex-row gap-5 content-stretch md:items-stretch w-11/12 max-w-sm md:max-w-4xl h-full mt-10"
       >
-        <div
-          class="bg-dark-hl w-full py-5 rounded flex justify-center items-center"
+        <a
+          href="/practice/index.html"
+          class="bg-dark-hl flex flex-col justify-center items-center gap-5 w-full min-h-24 flex-1"
         >
-          <h2 id="pokeName" class="text-xl font-semibold"></h2>
-        </div>
-        <div
-          id="display"
-          class="bg-white flex items-center justify-center rounded-md w-full h-36"
-        >
-          <img id="pokemonImage" class="size-36" />
-        </div>
-        <div
-          id="submitContainer"
-          class="flex w-full gap-5 cursor-pointer"
-        ></div>
-        <div
-          id="choices"
-          class="flex items-center justify-center gap-5 bg-white py-5 w-full rounded-md"
-        ></div>
-        <div
-          id="type-message"
-          class="hidden w-full font-bold text-lg text-center bg-dark-hl rounded-md py-2"
-        ></div>
-        <div
-          id="typings"
-          class="flex flex-wrap justify-center gap-2 w-full bg-dark-hl rounded-md p-3 sm:p-5"
-        ></div>
-        <div
-          id="stats"
-          class="hidden bg-dark-hl top-0 -right-44 rounded-md p-5"
-        >
-          <h3 class="text-white text-lg font-semibold">Stats</h3>
-          <div>
-            <p>
-              <span id="stats-correct">0</span> /
-              <span id="stats-total">0</span>
-            </p>
+          <div
+            class="flex flex-col justify-center items-center gap-5 p-5 w-full h-full rounded-sm"
+          >
+            <h2 class="text-2xl font-semibold">Practice</h2>
           </div>
-          <div>
-            <p><span id="stats-percentage">0</span> %</p>
+        </a>
+        <a
+          role="link"
+          aria-disabled="true"
+          class="bg-zinc-800 text-neutral-300 flex flex-col justify-center items-center gap-5 w-full min-h-24 flex-1"
+        >
+          <div
+            class="flex flex-col justify-center items-center gap-5 p-5 w-full h-full rounded-sm"
+          >
+            <h2 class="text-2xl font-semibold">Time attack</h2>
+            <p class="text-sm">Comming soon</p>
           </div>
-        </div>
-      </section>
+        </a>
+        <a
+          role="link"
+          aria-disabled="true"
+          class="bg-zinc-800 text-neutral-300 flex flex-col justify-center items-center gap-5 w-full min-h-24 flex-1"
+        >
+          <div
+            class="flex flex-col justify-center items-center gap-5 p-5 w-full h-full rounded-sm"
+          >
+            <h2 class="text-2xl font-semibold">Survival</h2>
+            <div>
+              <p class="text-sm">Comming soon</p>
+            </div>
+          </div>
+        </a>
+      </div>
     </main>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
