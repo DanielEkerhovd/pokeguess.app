@@ -15,11 +15,10 @@ export function renderResetButton() {
     'sm:size-20',
     'bg-dark-hl',
     'rounded-sm',
-    'px-5',
   );
 
   const image = document.createElement('img');
-  image.classList.add('size-fit');
+  image.classList.add('size-10', 'sm:size-12');
   image.src = '/media/retry.png';
   image.alt = 'Retry icon';
 
