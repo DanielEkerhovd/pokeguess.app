@@ -11,4 +11,8 @@ export default defineConfig({
       plugins: [tailwindcss],
     },
   },
+  build: {
+    target: 'esnext',
+    polyfillDynamicImport: false,
+  },
 });
