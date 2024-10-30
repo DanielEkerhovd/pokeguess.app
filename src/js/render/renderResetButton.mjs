@@ -11,7 +11,8 @@ export function renderResetButton() {
     'hidden',
     'items-center',
     'justify-center',
-    'size-20',
+    'size-16',
+    'sm:size-20',
     'bg-dark-hl',
     'rounded-sm',
     'px-5',
@@ -40,7 +41,8 @@ export function renderSubmitButton() {
     'items-center',
     'justify-center',
     'rounded-sm',
-    'h-20',
+    'h-16',
+    'sm:h-20',
     'font-semibold',
     'text-2xl',
     'bg-dark-hl',
@@ -48,7 +50,7 @@ export function renderSubmitButton() {
 
   const icon = document.createElement('img');
   icon.id = 'submitIcon';
-  icon.classList.add('size-16');
+  icon.classList.add('size-12', 'sm:size-16');
   icon.src = '/src/media/go.png';
   icon.alt = 'Go icon';
 

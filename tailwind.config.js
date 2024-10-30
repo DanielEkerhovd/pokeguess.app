@@ -3,7 +3,7 @@ module.exports = {
   content: [
     './index.html',
     './src/**/*.{html,js,mjs}',
-    './game/**/*.{html,js,mjs}',
+    './practice/**/*.{html,js,mjs}',
   ],
   theme: {
     extend: {
