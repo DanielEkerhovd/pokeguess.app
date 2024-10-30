@@ -1,4 +1,5 @@
-![Logo](pokeguess-screenshot.png)
+![pokeguess screenshot](https://github.com/user-attachments/assets/b0a835a6-0b2f-4f67-b906-2e7d50d62092)
+
 
 # Pokeguess.app
 
