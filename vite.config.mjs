@@ -16,5 +16,14 @@ export default defineConfig({
   build: {
     target: 'esnext',
     polyfillDynamicImport: false,
+
+    rollupOptions: {
+      input: {
+        main: './index.html',
+        practice: './practice/index.html',
+        timeAttack: './time-attack/index.html',
+        survival: './survival/index.html',
+      },
+    },
   },
 });
