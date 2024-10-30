@@ -1,76 +1,76 @@
 {
-    "types": [
-        {
-            "name": "normal",
-            "image": "/src/media/types/normaltype.png"
-        },
-        {
-            "name": "fire",
-            "image": "/src/media/types/firetype.png"
-        },
-        {
-            "name": "water",
-            "image": "/src/media/types/watertype.png"
-        },
-        {
-            "name": "electric",
-            "image": "/src/media/types/electrictype.png"
-        },
-        {
-            "name": "grass",
-            "image": "/src/media/types/grasstype.png"
-        },
-        {
-            "name": "ice",
-            "image": "/src/media/types/icetype.png"
-        },
-        {
-            "name": "fighting",
-            "image": "/src/media/types/fightingtype.png"
-        },
-        {
-            "name": "poison",
-            "image": "/src/media/types/poisontype.png"
-        },
-        {
-            "name": "ground",
-            "image": "/src/media/types/groundtype.png"
-        },
-        {
-            "name": "flying",
-            "image": "/src/media/types/flyingtype.png"
-        },
-        {
-            "name": "psychic",
-            "image": "/src/media/types/psychictype.png"
-        },
-        {
-            "name": "bug",
-            "image": "/src/media/types/bugtype.png"
-        },
-        {
-            "name": "rock",
-            "image": "/src/media/types/rocktype.png"
-        },
-        {
-            "name": "ghost",
-            "image": "/src/media/types/ghosttype.png"
-        },
-        {
-            "name": "dragon",
-            "image": "/src/media/types/dragontype.png"
-        },
-        {
-            "name": "dark",
-            "image": "/src/media/types/darktype.png"
-        },
-        {
-            "name": "steel",
-            "image": "/src/media/types/steeltype.png"
-        },
-        {
-            "name": "fairy",
-            "image": "/src/media/types/fairytype.png"
-        }
-    ]
+  "types": [
+    {
+      "name": "normal",
+      "image": "/media/types/normaltype.png"
+    },
+    {
+      "name": "fire",
+      "image": "/media/types/firetype.png"
+    },
+    {
+      "name": "water",
+      "image": "/media/types/watertype.png"
+    },
+    {
+      "name": "electric",
+      "image": "/media/types/electrictype.png"
+    },
+    {
+      "name": "grass",
+      "image": "/media/types/grasstype.png"
+    },
+    {
+      "name": "ice",
+      "image": "/media/types/icetype.png"
+    },
+    {
+      "name": "fighting",
+      "image": "/media/types/fightingtype.png"
+    },
+    {
+      "name": "poison",
+      "image": "/media/types/poisontype.png"
+    },
+    {
+      "name": "ground",
+      "image": "/media/types/groundtype.png"
+    },
+    {
+      "name": "flying",
+      "image": "/media/types/flyingtype.png"
+    },
+    {
+      "name": "psychic",
+      "image": "/media/types/psychictype.png"
+    },
+    {
+      "name": "bug",
+      "image": "/media/types/bugtype.png"
+    },
+    {
+      "name": "rock",
+      "image": "/media/types/rocktype.png"
+    },
+    {
+      "name": "ghost",
+      "image": "/media/types/ghosttype.png"
+    },
+    {
+      "name": "dragon",
+      "image": "/media/types/dragontype.png"
+    },
+    {
+      "name": "dark",
+      "image": "/media/types/darktype.png"
+    },
+    {
+      "name": "steel",
+      "image": "/media/types/steeltype.png"
+    },
+    {
+      "name": "fairy",
+      "image": "/media/types/fairytype.png"
+    }
+  ]
 }

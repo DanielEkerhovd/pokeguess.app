@@ -20,7 +20,7 @@ export function renderResetButton() {
 
   const image = document.createElement('img');
   image.classList.add('size-fit');
-  image.src = '/src/media/retry.png';
+  image.src = '/media/retry.png';
   image.alt = 'Retry icon';
 
   container.appendChild(image);
@@ -51,7 +51,7 @@ export function renderSubmitButton() {
   const icon = document.createElement('img');
   icon.id = 'submitIcon';
   icon.classList.add('size-12', 'sm:size-16');
-  icon.src = '/src/media/go.png';
+  icon.src = '/media/go.png';
   icon.alt = 'Go icon';
 
   container.appendChild(icon);

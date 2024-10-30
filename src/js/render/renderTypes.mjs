@@ -19,7 +19,7 @@ function createTypeElement(type, index) {
   const typeImage = document.createElement('img');
   typeElement.id = `${type.name}`;
   typeElement.dataset.index = index;
-  typeImage.src = `/src/media/type-icons/${type.name}.png`;
+  typeImage.src = `/media/type-icons/${type.name}.png`;
   typeImage.alt = `${type.name} type`;
   typeImage.classList.add('rounded-full', 'size-full');
   typeElement.appendChild(typeImage);

@@ -22,7 +22,7 @@ export default function showCorrectTypes(status, correctTypes) {
 
   correctTypes.forEach((type) => {
     const typeElement = document.createElement('img');
-    typeElement.src = `/src/media/type-icons/${type}.png`;
+    typeElement.src = `/media/type-icons/${type}.png`;
     typeElement.classList.add('size-12');
     container.appendChild(typeElement);
   });

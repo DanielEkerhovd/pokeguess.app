@@ -6,11 +6,11 @@ export default function checkout(status) {
     display.classList.remove('bg-white');
     display.classList.add('bg-green-500');
 
-    submitIcon.src = '/src/media/correct.png';
+    submitIcon.src = '/media/correct.png';
   } else {
     display.classList.remove('bg-white');
     display.classList.add('bg-red-500');
 
-    submitIcon.src = '/src/media/wrong.png';
+    submitIcon.src = '/media/wrong.png';
   }
 }
