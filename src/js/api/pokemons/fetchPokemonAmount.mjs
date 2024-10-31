@@ -1,14 +1,16 @@
+import { API_POKEMON } from '../tools/keys.mjs';
+
 export default async function fetchPokemonAmount() {
   // All existing pokemon without forms, this is not changing automatically at this moment
   const amountPokemon = 1025;
 
   try {
-    const response = await fetch('https://pokeapi.co/api/v2/pokemon');
+    const response = await fetch(API_POKEMON);
     const data = await response.json();
     const allPokemon = data.count;
     // Fetches number of resoures from the api
 
-    // All the forms have an id starting from 10001
+    // All the extra forms have an id starting from 10001
     const extraForms = allPokemon - amountPokemon;
     const pokeForms = [];
     for (let i = 1; i < extraForms + 1; i++) {

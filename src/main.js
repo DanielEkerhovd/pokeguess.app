@@ -1,8 +1,10 @@
 import renderTypes from './js/render/renderTypes.mjs';
-import runApi from './js/api/runApi.mjs';
+import getPokemon from './js/api/getPokemon.mjs';
 import renderPage from './js/render/renderPage.mjs';
-import fetchPokemonAmount from './js/api/fetchPokemonAmount.mjs';
+import fetchPokemonAmount from './js/api/pokemons/fetchPokemonAmount.mjs';
 import stats from './js/stats/stats.mjs';
+
+import fetchPokemonGens from './js/api/pokemonGens/fetchPokemonGens.mjs';
 
 import menu from './js/menu/menu.mjs';
 
@@ -12,7 +14,7 @@ async function main() {
   try {
     await fetchPokemonAmount();
     // Fetches first pokemon
-    const pokemon = await runApi();
+    const pokemon = await getPokemon();
 
     // Renders types buttons
     renderTypes();
@@ -24,6 +26,8 @@ async function main() {
     console.error('Failed to fetch Pokémon:', error);
   }
 }
+
+fetchPokemonGens();
 
 switch (currentWebPage) {
   case 'index.html':

@@ -35,7 +35,7 @@
         <!-- Hamburger menu -->
         <div
           id="menu"
-          class="translate-x-full fixed top-0 right-0 h-full bg-gray-800 w-full xl:max-w-md shadow-lg transform transition-transform duration-300 ease-in-out z-10 flex items-center flex-col"
+          class="fixed top-0 right-0 h-full bg-gray-800 w-full xl:max-w-md shadow-lg transform transition-transform duration-300 ease-in-out z-10 flex items-center flex-col"
         >
           <div
             id="menuContent"
@@ -54,9 +54,18 @@
             </div>
             <div id="menuSettings">
               <h2>SETTINGS</h2>
-              <menu class="text-lg font-medium mt-5 flex flex-col gap-1">
-                <li id="resetStats" class="cursor-pointer">Reset stats</li>
-              </menu>
+              <div class="text-lg font-medium mt-5 flex flex-col gap-1">
+                <div id="genSetting" class="">
+                  <p>Pokemon Generations</p>
+                  <div id="genSelection" class="grid grid-cols-3"></div>
+                </div>
+                <div
+                  id="resetStats"
+                  class="cursor-pointer bg-dark flex items-center justify-center rounded-sm py-1"
+                >
+                  Reset stats
+                </div>
+              </div>
             </div>
             <div class="flex gap-5 pb-5 items-end grow max-h-40">
               <a

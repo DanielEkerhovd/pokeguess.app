@@ -1,5 +1,5 @@
 import renderPage from '../render/renderPage.mjs';
-import runApi from '../api/runApi.mjs';
+import getPokemon from '../api/getPokemon.mjs';
 import resetDisplay from './resetDisplay.mjs';
 import renderTypes from '../render/renderTypes.mjs';
 import resetTypeMessage from './resetTypeMessage.mjs';
@@ -10,7 +10,7 @@ export default async function reset(renderedPokemon) {
   const preLoad = 3;
 
   for (let i = renderedPokemon.length; i < preLoad; i++) {
-    const pokemon = await runApi();
+    const pokemon = await getPokemon();
     renderedPokemon.push(pokemon);
   }
 
