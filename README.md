@@ -1,6 +1,5 @@
 ![pokeguess screenshot](https://github.com/user-attachments/assets/b0a835a6-0b2f-4f67-b906-2e7d50d62092)
 
-
 # Pokeguess.app
 
 Originally an app for practicing pokemon typings, but since evolved into an pokemon type guessing app! The project is possible by using the offical [Pokémon API](https://pokeapi.co/).
@@ -8,7 +7,7 @@ Originally an app for practicing pokemon typings, but since evolved into an poke
 The project currently features a practice mode, created using vanilla JS and TailwindCSS.
 Here you get an infinite flow of pokemon you can guess the typings of. The stats gets documented and stored in your browser for the next adventure. Don't like your stats? Don't worry, just reset them in the menu.
 
-More gamemodes comming soon.
+More gamemodes coming soon.
 
 ## Hosted website
 
