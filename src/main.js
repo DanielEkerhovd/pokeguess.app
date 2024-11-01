@@ -1,29 +1,9 @@
-import renderTypes from './js/render/renderTypes.mjs';
-import runApi from './js/api/runApi.mjs';
-import renderPage from './js/render/renderPage.mjs';
-import fetchPokemonAmount from './js/api/fetchPokemonAmount.mjs';
-import stats from './js/stats/stats.mjs';
-
+import getFirstPokemon from '/src/js/game/firstPokemon.mjs';
+import startPractice from '/src/js/gamemodes/practice/practice.mjs';
 import menu from './js/menu/menu.mjs';
 
 const currentWebPage = window.location.pathname;
-
-async function main() {
-  try {
-    await fetchPokemonAmount();
-    // Fetches first pokemon
-    const pokemon = await runApi();
-
-    // Renders types buttons
-    renderTypes();
-
-    // Sets up the initial array of pre-fetched Pokémon
-    const renderedPokemon = [];
-    renderPage(pokemon, renderedPokemon);
-  } catch (error) {
-    console.error('Failed to fetch Pokémon:', error);
-  }
-}
+const firstPokemon = await getFirstPokemon();
 
 switch (currentWebPage) {
   case 'index.html':
@@ -31,8 +11,7 @@ switch (currentWebPage) {
     break;
   case '/practice/index.html':
   case '/practice/':
-    main();
+    startPractice(firstPokemon);
     menu();
-    stats();
     break;
 }

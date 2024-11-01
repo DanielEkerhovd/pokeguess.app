@@ -1,10 +1,10 @@
-import renderPage from '../render/renderPage.mjs';
-import runApi from '../api/runApi.mjs';
+import nextPokemon from './nextPokemon.mjs';
+import runApi from '../../api/runApi.mjs';
 import resetDisplay from './resetDisplay.mjs';
 import renderTypes from '../render/renderTypes.mjs';
 import resetTypeMessage from './resetTypeMessage.mjs';
 
-export default async function reset(renderedPokemon) {
+export default async function reset(renderedPokemon, gamemode) {
   const resetButton = document.getElementById('retry');
 
   const preLoad = 3;
@@ -14,12 +14,12 @@ export default async function reset(renderedPokemon) {
     renderedPokemon.push(pokemon);
   }
 
-  const nextPokemon = renderedPokemon.shift();
+  const newPokemon = renderedPokemon.shift();
 
   resetButton.addEventListener('click', function () {
     resetDisplay();
     renderTypes();
-    renderPage(nextPokemon, renderedPokemon);
+    nextPokemon(newPokemon, gamemode, renderedPokemon);
     resetTypeMessage();
   });
 }

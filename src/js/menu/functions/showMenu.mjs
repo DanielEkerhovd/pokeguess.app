@@ -10,4 +10,10 @@ export default function showMenu() {
   closeMenu.addEventListener('click', () => {
     menu.classList.toggle('translate-x-full');
   });
+
+  document.addEventListener('click', (event) => {
+    if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+      menu.classList.add('translate-x-full');
+    }
+  });
 }

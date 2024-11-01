@@ -1,8 +1,8 @@
 import checkout from './checkout.mjs';
-import updateStats from '../stats/updateStats.mjs';
 import showCorrectTypes from './showCorrectTypes.mjs';
+import updatePracticeStats from '../../gamemodes/practice/stats/updateStats.mjs';
 
-export default function submitEvent(pokemon) {
+export default function submitEvent(pokemon, gamemode) {
   const submit = document.getElementById('submitButton');
 
   submit.addEventListener('click', () => submitEventListener(pokemon));
@@ -49,8 +49,12 @@ export default function submitEvent(pokemon) {
       const typesContainer = document.getElementById('typings');
       typesContainer.classList.add('hidden');
 
+      if (gamemode === 'practice') {
+        console.log('practice');
+        updatePracticeStats(correct);
+      }
+
       checkout(correct, correctTypes);
-      updateStats(correct);
       showCorrectTypes(correct, correctTypes);
     }
   }

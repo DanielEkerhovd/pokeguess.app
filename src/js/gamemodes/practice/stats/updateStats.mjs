@@ -1,6 +1,6 @@
 import updateStatsDisplay from './updateStatsDisplay.mjs';
 
-export default function updateStats(correct) {
+export default function updatePracticeStats(correct) {
   const stats = JSON.parse(sessionStorage.getItem('stats'));
 
   if (correct) {
