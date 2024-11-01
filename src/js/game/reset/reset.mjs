@@ -1,7 +1,7 @@
 import nextPokemon from './nextPokemon.mjs';
 import runApi from '../../api/runApi.mjs';
 import resetDisplay from './resetDisplay.mjs';
-import renderTypes from '../render/renderTypes.mjs';
+import renderTypes from '../types/renderTypes.mjs';
 import resetTypeMessage from './resetTypeMessage.mjs';
 
 export default async function reset(renderedPokemon, gamemode) {

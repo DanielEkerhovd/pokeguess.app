@@ -1,21 +1,22 @@
 import selectEvent from '../select/selectEvent.mjs';
+// import typesInfo from './typesInfo.mjs';
+import fetchTypes from './fetchTypes.mjs';
+import typingModal from './typingModal.mjs';
 
-const fetchTypings = async () => {
-  try {
-    const response = await fetch('/types.json');
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error(error);
-  }
-};
-
-const fetchedTypes = await fetchTypings();
+const fetchedTypes = await fetchTypes();
 const types = fetchedTypes.types;
 
 function createTypeElement(type, index) {
   const typeElement = document.createElement('div');
-  typeElement.classList.add('size-12', 'rounded-full', 'cursor-pointer');
+  typeElement.classList.add(
+    'size-12',
+    'rounded-full',
+    'cursor-pointer',
+    'relative',
+    'flex',
+    'justify-center',
+    'items-end',
+  );
   const typeImage = document.createElement('img');
   typeElement.id = `${type.name}`;
   typeElement.dataset.index = index;
@@ -37,6 +38,7 @@ export default function renderTypes() {
     const index = types.indexOf(type);
     const typeButton = createTypeElement(type, index);
     selectEvent(typeButton);
+    typingModal(typeButton);
     typesContainer.appendChild(typeButton);
   });
 }
