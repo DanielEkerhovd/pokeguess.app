@@ -55,7 +55,19 @@
             <div id="menuSettings">
               <h2>SETTINGS</h2>
               <menu class="text-lg font-medium mt-5 flex flex-col gap-1">
-                <li id="resetStats" class="cursor-pointer">Reset stats</li>
+                <div
+                  id="toggleTypingText"
+                  class="flex flex-row items-center gap-2"
+                >
+                  <label for="toggleTyping">Typing names</label>
+                  <input
+                    name="toggleTyping"
+                    id="settingTypingText"
+                    type="checkbox"
+                    class="accent-dark-hl size-5 rounded-sm"
+                  />
+                </div>
+                <div id="resetStats" class="cursor-pointer">Reset stats</div>
               </menu>
             </div>
             <div class="flex gap-5 pb-5 items-end grow max-h-40">

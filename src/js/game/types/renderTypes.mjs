@@ -6,6 +6,8 @@ import typingModal from './typingModal.mjs';
 const fetchedTypes = await fetchTypes();
 const types = fetchedTypes.types;
 
+const settingsTypes = JSON.parse(localStorage.getItem('settings')).typingText;
+
 function createTypeElement(type, index) {
   const typeElement = document.createElement('div');
   typeElement.classList.add(
@@ -38,7 +40,9 @@ export default function renderTypes() {
     const index = types.indexOf(type);
     const typeButton = createTypeElement(type, index);
     selectEvent(typeButton);
-    typingModal(typeButton);
+    if (settingsTypes) {
+      typingModal(typeButton);
+    }
     typesContainer.appendChild(typeButton);
   });
 }
