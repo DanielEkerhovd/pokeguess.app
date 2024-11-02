@@ -6,7 +6,7 @@ import {
   renderSubmitButton,
 } from '../reset/renderResetButton.mjs';
 import reset from '../reset/reset.mjs';
-import renderTypes from '../render/renderTypes.mjs';
+import renderTypes from '../types/renderTypes.mjs';
 
 export default async function nextPokemon(
   pokemon,
