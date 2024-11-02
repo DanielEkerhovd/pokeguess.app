@@ -1,10 +1,10 @@
 import checkout from './checkout.mjs';
 import showCorrectTypes from './showCorrectTypes.mjs';
 import updatePracticeStats from '../../gamemodes/practice/stats/updateStats.mjs';
+import submitWithoutSelected from './error/submitWithoutSelected.mjs';
 
 export default function submitEvent(pokemon, gamemode) {
   const submit = document.getElementById('submitButton');
-
   submit.addEventListener('click', () => submitEventListener(pokemon));
 
   function submitEventListener(pokemon) {
@@ -56,6 +56,8 @@ export default function submitEvent(pokemon, gamemode) {
 
       checkout(correct, correctTypes);
       showCorrectTypes(correct, correctTypes);
+    } else {
+      submitWithoutSelected();
     }
   }
 }
