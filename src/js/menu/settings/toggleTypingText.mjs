@@ -1,8 +1,6 @@
 import typingModal from '../../game/types/typingModal.mjs';
 
 export default function toggleTypingsText() {
-  const typings = document.querySelectorAll('#typings div');
-
   const typingToggle = document.getElementById('settingTypingText');
 
   const typingStatus = JSON.parse(localStorage.getItem('settings')).typingText;
@@ -22,6 +20,7 @@ export default function toggleTypingsText() {
     );
 
     if (typingSetting) {
+      const typings = document.querySelectorAll('#typings > div');
       typings.forEach((typing) => {
         typingModal(typing);
       });
