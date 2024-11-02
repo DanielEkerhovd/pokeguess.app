@@ -8,7 +8,7 @@ import {
 import reset from './reset/reset.mjs';
 import renderTypes from './types/renderTypes.mjs';
 
-export default async function startGame(gamemode, firstPokemon) {
+export default function startGame(gamemode, firstPokemon) {
   // Sets up the initial array of pre-fetched Pokémon
   const renderedPokemon = [];
 

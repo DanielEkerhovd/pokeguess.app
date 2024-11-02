@@ -14,7 +14,8 @@ switch (currentWebPage) {
     break;
   case '/practice/index.html':
   case '/practice/':
-    startPractice(firstPokemon);
+    await startPractice(firstPokemon);
     menu();
+
     break;
 }
