@@ -3,7 +3,7 @@ import showCorrectTypes from './showCorrectTypes.mjs';
 import updatePracticeStats from '../../gamemodes/practice/stats/updateStats.mjs';
 import submitWithoutSelected from './error/submitWithoutSelected.mjs';
 
-export default function submitEvent(pokemon, gamemode) {
+export default function submitEvent(pokemon) {
   const submit = document.getElementById('submitButton');
   submit.addEventListener('click', () => submitEventListener(pokemon));
 
@@ -21,6 +21,8 @@ export default function submitEvent(pokemon, gamemode) {
     if (selected1 && (choice2 ? selected2 : true)) {
       resetButton.classList.remove('hidden');
       resetButton.classList.add('flex');
+
+      ('submitted');
 
       const selectedTypes = [];
       const correctTypes = [];
@@ -49,10 +51,7 @@ export default function submitEvent(pokemon, gamemode) {
       const typesContainer = document.getElementById('typings');
       typesContainer.classList.add('hidden');
 
-      if (gamemode === 'practice') {
-        console.log('practice');
-        updatePracticeStats(correct);
-      }
+      updatePracticeStats(correct);
 
       checkout(correct, correctTypes);
       showCorrectTypes(correct, correctTypes);

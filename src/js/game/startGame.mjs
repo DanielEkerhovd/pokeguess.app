@@ -19,5 +19,5 @@ export default function startGame(gamemode, firstPokemon) {
   renderPokemon(firstPokemon);
   renderTypes();
   renderSelection(firstPokemon);
-  submitEvent(firstPokemon, gamemode);
+  submitEvent(firstPokemon);
 }
